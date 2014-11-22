@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Gathering::VERSION
   spec.authors       = ["Andy Nicholson"]
   spec.email         = ["andrew@anicholson.net"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Bring Groups Together}
+  spec.description   = %q{Core of Gathering application}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec", "~> 3"
 end

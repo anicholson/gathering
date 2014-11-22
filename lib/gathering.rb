@@ -1,5 +1,7 @@
 require "gathering/version"
 
-module Gathering
-  # Your code goes here...
+%w(gathering occasion person role team helper).each do |model|
+  require "gathering/models/#{model}"
 end
+
+module Gathering; end

@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-class Gathering::Gathering
-  attr_reader :name, :occasions, :time
-end
+
 
 describe Gathering::Gathering do
   describe 'interface' do

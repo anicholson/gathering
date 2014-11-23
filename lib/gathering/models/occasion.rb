@@ -1,5 +1,7 @@
 module Gathering
   class Occasion
-    attr_reader :gathering, :date, :time
+    include Lotus::Entity
+
+    self.attributes = :gathering, :date, :time
   end
 end

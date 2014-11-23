@@ -1,5 +1,6 @@
 module Gathering
   class Team
-    attr_reader :name, :people, :leader
+    include Lotus::Entity
+    self.attributes = :name, :people, :leader
   end
 end

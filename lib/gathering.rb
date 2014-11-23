@@ -1,6 +1,7 @@
-require "gathering/version"
+require 'lotus/model'
+require 'gathering/version'
 
-%w(gathering occasion person role team helper).each do |model|
+%w(gathering occasion person role team).each do |model|
   require "gathering/models/#{model}"
 end
 

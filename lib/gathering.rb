@@ -1,3 +1,6 @@
+require 'yaml'
+require 'pathname'
+
 require 'lotus/model'
 require 'gathering/version'
 
@@ -5,4 +8,15 @@ require 'gathering/version'
   require "gathering/models/#{model}"
 end
 
-module Gathering; end
+module Gathering
+  def dummy
+    Gathering.new(example_yaml)
+  end
+
+  def example_yaml
+    YAML.load_file(
+      Pathname.new(__FILE__)
+              .join('..', 'gathering', 'example.yml')
+    )[:gathering]
+  end
+end

@@ -1,0 +1,43 @@
+---
+
+:people:
+  - &dave
+    name: Dave
+    contact: +6140xxxxxxx
+
+:roles: &roles
+  - :name: Setup
+    :type: individual
+    :go-to: *dave
+
+  - :name: Packdown
+    :type: individual
+    :go-to: *dave
+
+  - :name: Welcome
+    :type: individual
+    :go-to: *dave
+
+  - :name: Service Leading
+    :type: individual
+    :go-to: *dave
+
+  - :name: Band
+    :type: team
+    :go-to: *dave
+
+bands:
+  - name: Band A
+    members:
+      - *dave
+
+  - name: Band B
+    members:
+      - *dave
+
+:gathering:
+  :name: "St. Example's 10am"
+  :roles: *roles
+  :time: 10am
+  :regular: true
+  :period: weekly

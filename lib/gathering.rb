@@ -6,6 +6,7 @@ require 'gathering/version'
 
 %w(gathering occasion person role team).each do |model|
   require "gathering/models/#{model}"
+  require "gathering/repositories/#{model}_repository.rb"
 end
 
 module Gathering
@@ -19,4 +20,12 @@ module Gathering
               .join('..', 'gathering', 'example.yml')
     )[:gathering]
   end
+
+  REPOSITORIES = [
+    GatheringRepository,
+    OccasionRepository,
+    PersonRepository,
+    RoleRepository,
+    TeamRepository
+  ]
 end

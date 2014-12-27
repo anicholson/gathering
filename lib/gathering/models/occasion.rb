@@ -7,5 +7,9 @@ module Gathering
     def gathering
       GatheringRepository.find(self.id)
     end
+
+    def roles
+      OccasionRolesRepository.roles_for_occasion(self)
+    end
   end
 end

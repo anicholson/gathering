@@ -4,7 +4,7 @@ require 'pathname'
 require 'lotus/model'
 require 'gathering/version'
 
-%w(gathering occasion person role team team_membership).each do |model|
+%w(gathering occasion person role occasion_roles team team_membership).each do |model|
   require "gathering/models/#{model}"
   require "gathering/repositories/#{model}_repository.rb"
 end
